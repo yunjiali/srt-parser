@@ -27,8 +27,6 @@ function returnParsedData(language, callback, err, data) {
 }
 
 function fromString(language, stringData) {
-    var segments = stringData.split((stringData.search("\n\r\n") != -1) ? "\n\r\n" : "\n\n" )
-    
     var segments = stringData.split("\n\n");
     if(segments.length === 0)
     	segments = stringData.split("\r\n\r\n");
